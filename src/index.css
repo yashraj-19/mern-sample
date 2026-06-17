@@ -1,0 +1,412 @@
+/* ---------- base reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- top nav ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 15px;
+}
+
+.navbar .nav-links a:hover {
+  color: #4f46e5;
+}
+
+/* ---------- hero card ---------- */
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 64px 48px;
+  background: #f9fafb;
+}
+
+.hero-card {
+  display: flex;
+  max-width: 960px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-card-image {
+  flex: 1;
+}
+
+.hero-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card-body {
+  flex: 1;
+  padding: 40px;
+}
+
+.hero-card-body .badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.hero-card-body h1 {
+  font-size: 34px;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+.hero-card-body p {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.hero-card-body .meta {
+  margin-bottom: 22px;
+}
+
+/* ---------- about section ---------- */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.about p {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 36px;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.about-stats .stat h3 {
+  font-size: 32px;
+  color: #4f46e5;
+}
+
+.about-stats .stat span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- generic section (alternating image / text) ---------- */
+.section {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+
+/* when reverse is set, image goes to the right */
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section .section-image {
+  flex: 1;
+}
+
+.section .section-image img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.section .section-text {
+  flex: 1;
+}
+
+.section .section-text h1 {
+  font-size: 38px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.section .section-text h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.section .section-text p {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+/* small meta line: date / time / author */
+.meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 26px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #4338ca;
+}
+
+/* ---------- features section ---------- */
+.features {
+  background: #f9fafb;
+  padding: 72px 48px;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.features-grid {
+  display: flex;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+
+.feature-card .icon {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- testimonials section ---------- */
+.testimonials {
+  padding: 72px 48px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.testimonials-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 44px;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  flex: 1;
+  min-width: 260px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card .quote {
+  font-size: 15px;
+  color: #4b5563;
+  font-style: italic;
+  margin-bottom: 22px;
+}
+
+.testimonial-card .author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-card .author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card .author h4 {
+  font-size: 15px;
+  color: #111827;
+}
+
+.testimonial-card .author span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ---------- call to action ---------- */
+.cta {
+  text-align: center;
+  padding: 80px 48px;
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.cta p {
+  font-size: 16px;
+  margin-bottom: 26px;
+  opacity: 0.9;
+}
+
+.cta .btn {
+  background: #ffffff;
+  color: #4f46e5;
+}
+
+.cta .btn:hover {
+  background: #e5e7eb;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  text-align: center;
+  padding: 26px;
+  font-size: 14px;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 768px) {
+  .section,
+  .section.reverse {
+    flex-direction: column;
+    padding: 48px 24px;
+  }
+
+  .hero-card {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 40px 24px;
+  }
+
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .navbar .nav-links {
+    gap: 16px;
+  }
+
+  .section .section-text h1 {
+    font-size: 30px;
+  }
+}
